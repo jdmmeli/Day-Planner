@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-Planner</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="moment.js" type="text/javascript"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="Header">
+        <div class="row">
+            <div class="col-md text-center">
+                <h1>Workday Planner</h1>
+                <br>
+                <h3 id="current-date">Today's Date</h3>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1" id="hours">
+                <div class="border">9am</div>
+                <div class="border">10am</div>
+                <div class="border">11am</div>
+                <div class="border">12am</div>
+                <div class="border">1pm</div>
+                <div class="border">2pm</div>
+                <div class="border">3pm</div>
+                <div class="border">4pm</div>
+                <div class="border">5pm</div>
+            </div>
+            <div class="col-md-11" id="events">
+                <div class="form-control border" id="9am"></div>
+                <div class="form-control border" id="10am"></div>
+                <div class="form-control border" id="11am"></div>
+                <div class="form-control border" id="12am"></div>
+                <div class="form-control border" id="1pm"></div>
+                <div class="form-control border" id="2pm"></div>
+                <div class="form-control border" id="3pm"></div>
+                <div class="form-control border" id="4pm"></div>
+                <div class="form-control border" id = "5pm"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
