@@ -5,15 +5,18 @@ $(document).ready(function () {
     var dateFormat = moment().format('MMMM Do');
     var dayFormat = moment().format('dddd');
     $("#current-date").text(dayFormat + ", " + dateFormat);
-    var time = ("HH:mm");
+    
 
     var colorsTime = setInterval(colorsTime, 1000);
 
     $("#message").css("color" , "black");
     $("#message").css("background-color" , "black");
 
+    var audioElement = document.createElement("audio");
+        audioElement.setAttribute("src", "https://www.fesliyanstudios.com/play-mp3/4238");
 
-    // colors ()
+
+    
 
 
     var niner = JSON.parse(localStorage.getItem("nineA"));
@@ -208,10 +211,12 @@ $(document).ready(function () {
         else if (moment().isBefore(moment("16:59:59", time))) {
             $("#5pm").css("background-color", "green");
         }
+    }
 
-        
-
-}
+    $("#surprise").on("click" , function() {
+        $("#image-div").html("<img src='https://image.shutterstock.com/image-vector/happy-hour-burst-toasting-hands-260nw-250561168.jpg' />");
+            audioElement.play();
+    })
 
 
 
