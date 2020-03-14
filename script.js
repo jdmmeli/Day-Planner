@@ -1,24 +1,25 @@
 $(document).ready(function () {
 
-
+    //formats time and the date
     var time = ("HH:mm:ss");
     var dateFormat = moment().format('MMMM Do');
     var dayFormat = moment().format('dddd');
+    //displays the date in the div id current-date
     $("#current-date").text(dayFormat + ", " + dateFormat);
     
-
+    //sets the interval for time
     var colorsTime = setInterval(colorsTime, 1000);
-
+    //fills in the color in the black line
     $("#message").css("color" , "black");
     $("#message").css("background-color" , "black");
-
+    //the woohoo on clicking 6pm
     var audioElement = document.createElement("audio");
         audioElement.setAttribute("src", "https://www.fesliyanstudios.com/play-mp3/4238");
 
 
     
 
-
+    //retrieves user input saved in local storage
     var niner = JSON.parse(localStorage.getItem("nineA"));
     $("#9am").val(niner);
 
@@ -46,7 +47,7 @@ $(document).ready(function () {
     var fiver = JSON.parse(localStorage.getItem("fiveP"));
     $("#5pm").val(fiver);
 
-
+    //onclick function that saves user input to local storage
     $("#nine").on("click", function () {
         var nine = $("#9am").val().trim();
         console.log(nine)
@@ -100,7 +101,7 @@ $(document).ready(function () {
         console.log(five);
         localStorage.setItem("fiveP", JSON.stringify(five));
     });
-
+    //function that color codes times slots
     colors ();
         
     function colors() {
@@ -212,7 +213,7 @@ $(document).ready(function () {
             $("#5pm").css("background-color", "green");
         }
     }
-
+     //onclick function that puts happy hour image on the page and plays audio when 6pm is clicked
     $("#surprise").on("click" , function() {
         $("#image-div").html("<img src='https://image.shutterstock.com/image-vector/happy-hour-burst-toasting-hands-260nw-250561168.jpg' />");
             audioElement.play();
